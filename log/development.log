@@ -1,0 +1,217 @@
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240805224508)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "author" varchar, "category" varchar, "published_at" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240805224508"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-08-05 22:45:34.299572"], ["updated_at", "2024-08-05 22:45:34.299572"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240805224821)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "published_at" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240805224821)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "published_at" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE articles[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240805224821)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "published_at" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240805224821"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/" for ::1 at 2024-08-05 16:40:27 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (6.0.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+          "title": 'New photography exhibition',
+          "content": 'In a new exhibition at the Royal Botanic Garden Edinburgh, famous photographer explores the astonishing diversity of nature.',
+          "author": 'Oscar Davies',
+          "category": 'Nature',
+          "published_at": '2020-02-10',
+        }
+Started POST "/articles" for ::1 at 2024-08-05 16:41:23 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+{
+          "title": 'New photography exhibition',
+          "content": 'In a new exhibition at the Royal Botanic Garden Edinburgh, famous photographer explores the astonishing diversity of nature.',
+          "author": 'Oscar Davies',
+          "category": 'Nature',
+          "published_at": '2020-02-10',
+        }
+Processing by ArticlesController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+          "title": 'New photography exhibition',
+          "content": 'In a new exhibition at the Royal Botanic Garden Edinburgh, famous photographer explores the astonishing diversity of nature.',
+          "author": 'Oscar Davies',
+          "category": 'Nature',
+          "published_at": '2020-02-10',
+        }'):
+  
+app/controllers/articles_controller.rb:52:in `article_params'
+app/controllers/articles_controller.rb:21:in `create'
+Started POST "/articles" for ::1 at 2024-08-05 16:44:01 -0700
+Processing by ArticlesController#create as */*
+  Parameters: {"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10", "article"=>{"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mArticle Create (2.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "author", "category", "published_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "New photography exhibition"], ["content", "In a new exhibition at the Royal Botanic Garden Edinburgh"], ["author", "Oscar Davies"], ["category", "Nature"], ["published_at", "2020-02-10"], ["created_at", "2024-08-05 23:44:01.458906"], ["updated_at", "2024-08-05 23:44:01.458906"]]
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+Completed 201 Created in 28ms (Views: 0.7ms | ActiveRecord: 5.3ms | Allocations: 6981)
+
+
+Started POST "/articles" for ::1 at 2024-08-05 16:50:42 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#create as */*
+  Parameters: {"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10", "article"=>{"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mArticle Create (1.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "author", "category", "published_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "New photography exhibition"], ["content", "In a new exhibition at the Royal Botanic Garden Edinburgh"], ["author", "Oscar Davies"], ["category", "Nature"], ["published_at", "2020-02-10"], ["created_at", "2024-08-05 23:50:42.252836"], ["updated_at", "2024-08-05 23:50:42.252836"]]
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+Completed 201 Created in 15ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 7048)
+
+
+Started POST "/articles" for ::1 at 2024-08-05 16:59:58 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#create as */*
+  Parameters: {"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10", "article"=>{"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Davies", "category"=>"Nature", "published_at"=>"2020-02-10"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mArticle Create (1.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "author", "category", "published_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "New photography exhibition"], ["content", "In a new exhibition at the Royal Botanic Garden Edinburgh"], ["author", "Oscar Davies"], ["category", "Nature"], ["published_at", "2020-02-10"], ["created_at", "2024-08-05 23:59:58.885359"], ["updated_at", "2024-08-05 23:59:58.885359"]]
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+Completed 201 Created in 383422ms (Views: 22.0ms | ActiveRecord: 3.7ms | Allocations: 59496)
+
+
+Started PUT "/articles/3" for ::1 at 2024-08-05 18:07:45 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [PUT] "/articles/3"):
+  
+actionpack (6.0.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/articles/3" for ::1 at 2024-08-05 18:08:23 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#update as */*
+  Parameters: {"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Favies", "category"=>"Nature", "published_at"=>"2020-02-10", "id"=>"3", "article"=>{"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Favies", "category"=>"Nature", "published_at"=>"2020-02-10"}}
+Completed 405 Method Not Allowed in 80ms (Views: 8.1ms | ActiveRecord: 28.9ms | Allocations: 144)
+
+
+Started PUT "/articles/3" for ::1 at 2024-08-05 19:29:09 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#update as */*
+  Parameters: {"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Favies", "category"=>"Nature", "published_at"=>"2020-02-10", "id"=>"3", "article"=>{"title"=>"New photography exhibition", "content"=>"In a new exhibition at the Royal Botanic Garden Edinburgh", "author"=>"Oscar Favies", "category"=>"Nature", "published_at"=>"2020-02-10"}}
+Completed 405 Method Not Allowed in 9ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started PUT "/articles/3" for ::1 at 2024-08-05 19:38:40 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [PUT] "/articles/3"):
+  
+actionpack (6.0.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5.1) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
